@@ -1,0 +1,83 @@
+$text-color: #3B3B3B;
+$darker-color: #000;
+$lines-color: #D9DADC;
+$white-color: #fff;
+$accent-blue-color: #2BBEEC;
+$cards-shadow: 0 0 0 5px rgba(0,0,0,.5);
+
+
+header {
+    border-bottom: 1.5px solid $lines-color;
+    font-size: .9rem;
+    font-weight: 500;
+    text-transform: uppercase;
+    padding: 2vh 5vw;
+    user-select: none;
+    margin: auto 0;
+
+    nav {
+        display: flex;
+        justify-content: space-between;
+        margin: auto 0;
+        line-height: calc(5vh + 3vh);
+
+        .logo {
+            display: flex;
+            justify-content: flex-start;
+            gap: .5rem;
+
+            div {
+                color: $accent-blue-color;
+            }
+        
+            svg {
+                display: inline-block;
+                width: 30px;
+                fill: #2BBEEC;
+                order: -1;
+            }
+        }
+
+        .nav-list {
+            display: flex;
+            justify-content: flex-start;
+            gap: 1.5rem;
+
+            li {
+                cursor: pointer;
+
+                &:hover {
+                    color: $accent-blue-color;
+                    transition: all .3s ease;
+                }
+            }
+        }
+        
+        .buttons {
+            display: flex;
+            justify-content: space-evenly;
+            flex-flow: row wrap;
+            gap: 1rem;
+
+            button {
+                background: none;
+                border-style: none;
+                border: 1px solid $lines-color;
+                padding: 0 10px;
+                border-radius: 3px;
+                font-weight: 500;
+                cursor: pointer;
+
+                &:hover {
+                    background-color: $accent-blue-color;
+                    color: $white-color;
+                    transition: .5s ease;
+                }
+
+                &:active {
+                    outline: none;
+                }
+            }
+        }
+    }
+}
