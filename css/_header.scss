@@ -48,7 +48,6 @@ header {
 
                 &:hover {
                     color: $accent-blue-color;
-                    transition: all .3s ease;
                 }
             }
         }
@@ -71,7 +70,7 @@ header {
                 &:hover {
                     background-color: $accent-blue-color;
                     color: $white-color;
-                    transition: .5s ease;
+                    transition: .3s ease;
                 }
 
                 &:active {

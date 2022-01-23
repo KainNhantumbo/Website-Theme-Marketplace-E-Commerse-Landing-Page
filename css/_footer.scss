@@ -10,7 +10,7 @@ $cards-shadow: 0 0 0 5px rgba(0,0,0,.5);
 footer {
     display: flex;
     flex-direction: column;
-    gap: 1em;
+    gap: 2em;
     background: $footer-background;
     color: $white-color;
     padding: 2em;
@@ -18,7 +18,7 @@ footer {
 
 .top-container {
     display: flex;
-    justify-content: space-evenly;
+    justify-content: center;
     gap: 2rem;
 
     section {
@@ -34,6 +34,7 @@ footer {
             font-weight: 500;
             color: rgba($white-color, .5);
             margin: 2vh 0;
+            user-select: none;
         }
     
         ul {
@@ -42,8 +43,67 @@ footer {
 
             li {
                 text-transform: capitalize;
+                cursor: pointer;
+
+                &:hover {
+                    color: $accent-blue-color;
+                }
             }
         }
+
+        p {
+            text-align: start;
+        }
+
+        label {
+            margin: .5em 0;
+        }
+
+        input {
+            padding: .5em 2.3em .5em .3em;
+            border-style: none;
+            border: none;
+            border-radius: 3px;
+            box-sizing: border-box;
+
+            &:hover, &:active, &:focus {
+                border: none;
+                outline-color: $accent-blue-color;
+                box-shadow: 0 0 5px 3px rgba($accent-blue-color, .9);
+            }
+
+            &::placeholder {
+                background: $white-color;
+                font-size: .9rem;
+                font-weight: 500;
+            }
+        }
+
+        .input-container {
+            position: relative;
+
+            button {
+                width: 30px;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                border-style: none;
+                border: none;
+                border-radius: 3px;
+                padding: 5px;
+                background: $accent-blue-color;
+                position: absolute;
+                bottom: 2px;
+                right: 3px;
+    
+                svg {
+                    width: 30px;
+                    fill: $white-color;
+                }
+            }
+        }
+
+        
     }
 }
 
@@ -54,25 +114,37 @@ footer {
 
     .logo-base {
         display: flex;
-            justify-content: flex-start;
-            gap: .5rem;
+        justify-content: flex-start;
+        gap: 1rem;
 
-            div {
-                color: $accent-blue-color;
-            }
-        
-            svg {
-                display: inline-block;
-                width: 30px;
-                fill: #2BBEEC;
-                order: -1;
-            }
+        div {
+            color: $accent-blue-color;
+        }
+    
+        .svg {
+            display: inline-block;
+            width: 30px;
+            fill: #2BBEEC;
+            order: -1;
+        }
     }
 
     .social-media{
         display: flex;
         justify-content: space-evenly;
-        gap: 2em;
+        gap: 3em;
+
+        div {
+            position: relative;
+
+            .social-media_svg {
+                width: 18px;
+                fill: $accent-blue-color;
+                position: absolute;
+                bottom: 8px;
+                left: -25px;
+            }
+        }
 
         a {
             text-decoration: none;

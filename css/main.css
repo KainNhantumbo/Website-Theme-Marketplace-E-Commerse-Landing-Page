@@ -61,8 +61,6 @@ header nav .nav-list li {
 
 header nav .nav-list li:hover {
   color: #2BBEEC;
-  -webkit-transition: all .3s ease;
-  transition: all .3s ease;
 }
 
 header nav .buttons {
@@ -92,8 +90,8 @@ header nav .buttons button {
 header nav .buttons button:hover {
   background-color: #2BBEEC;
   color: #fff;
-  -webkit-transition: .5s ease;
-  transition: .5s ease;
+  -webkit-transition: .3s ease;
+  transition: .3s ease;
 }
 
 header nav .buttons button:active {
@@ -108,7 +106,7 @@ footer {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  gap: 1em;
+  gap: 2em;
   background: #242D37;
   color: #fff;
   padding: 2em;
@@ -118,9 +116,9 @@ footer {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: space-evenly;
-      -ms-flex-pack: space-evenly;
-          justify-content: space-evenly;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   gap: 2rem;
 }
 
@@ -145,6 +143,10 @@ footer {
   font-weight: 500;
   color: rgba(255, 255, 255, 0.5);
   margin: 2vh 0;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
 }
 
 .top-container section ul {
@@ -154,6 +156,89 @@ footer {
 
 .top-container section ul li {
   text-transform: capitalize;
+  cursor: pointer;
+}
+
+.top-container section ul li:hover {
+  color: #2BBEEC;
+}
+
+.top-container section p {
+  text-align: start;
+}
+
+.top-container section label {
+  margin: .5em 0;
+}
+
+.top-container section input {
+  padding: .5em 2.3em .5em .3em;
+  border-style: none;
+  border: none;
+  border-radius: 3px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+.top-container section input:hover, .top-container section input:active, .top-container section input:focus {
+  border: none;
+  outline-color: #2BBEEC;
+  -webkit-box-shadow: 0 0 5px 3px rgba(43, 190, 236, 0.9);
+          box-shadow: 0 0 5px 3px rgba(43, 190, 236, 0.9);
+}
+
+.top-container section input::-webkit-input-placeholder {
+  background: #fff;
+  font-size: .9rem;
+  font-weight: 500;
+}
+
+.top-container section input:-ms-input-placeholder {
+  background: #fff;
+  font-size: .9rem;
+  font-weight: 500;
+}
+
+.top-container section input::-ms-input-placeholder {
+  background: #fff;
+  font-size: .9rem;
+  font-weight: 500;
+}
+
+.top-container section input::placeholder {
+  background: #fff;
+  font-size: .9rem;
+  font-weight: 500;
+}
+
+.top-container section .input-container {
+  position: relative;
+}
+
+.top-container section .input-container button {
+  width: 30px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  border-style: none;
+  border: none;
+  border-radius: 3px;
+  padding: 5px;
+  background: #2BBEEC;
+  position: absolute;
+  bottom: 2px;
+  right: 3px;
+}
+
+.top-container section .input-container button svg {
+  width: 30px;
+  fill: #fff;
 }
 
 .base-container {
@@ -175,14 +260,14 @@ footer {
   -webkit-box-pack: start;
       -ms-flex-pack: start;
           justify-content: flex-start;
-  gap: .5rem;
+  gap: 1rem;
 }
 
 .base-container .logo-base div {
   color: #2BBEEC;
 }
 
-.base-container .logo-base svg {
+.base-container .logo-base .svg {
   display: inline-block;
   width: 30px;
   fill: #2BBEEC;
@@ -198,7 +283,19 @@ footer {
   -webkit-box-pack: space-evenly;
       -ms-flex-pack: space-evenly;
           justify-content: space-evenly;
-  gap: 2em;
+  gap: 3em;
+}
+
+.base-container .social-media div {
+  position: relative;
+}
+
+.base-container .social-media div .social-media_svg {
+  width: 18px;
+  fill: #2BBEEC;
+  position: absolute;
+  bottom: 8px;
+  left: -25px;
 }
 
 .base-container .social-media a {
