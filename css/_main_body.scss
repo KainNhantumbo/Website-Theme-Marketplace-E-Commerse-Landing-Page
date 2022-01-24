@@ -1,0 +1,215 @@
+$footer-background: #242D37;
+$white-color: #fff;
+$text-color: #3B3B3B;
+$darker-color: #000;
+$lines-color: #D9DADC;
+$white-color: #fff;
+$accent-blue-color: #2BBEEC;
+$cards-shadow: 0 0 0 5px rgba(0,0,0,.5);
+
+.welcome-message {
+    position: relative;
+    width: 100%;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-flow: column wrap;
+
+    h1, p {
+        text-align: center;
+        color: $white-color;
+        position: absolute;
+        top: 3em;
+        left: auto;
+        z-index: 1;
+    }
+
+    p {
+        font-size: 1.5rem;
+        line-height: 2rem;
+        top: 8em;
+    }
+
+    img {
+        max-width: 100%;
+        display: inline-block;
+        filter: brightness(.4);
+    }
+}
+
+.main-container {
+    display: flex;
+    justify-content: flex-start;
+    gap: 5%;
+    margin: 2em 5%;
+}
+
+.aside-container {
+    width: 25%;
+    display: flex;
+    justify-content: flex-start;
+    flex-flow: column wrap;
+    gap: 1em;
+
+    div {
+        display: flex;
+        justify-content: flex-start;
+        flex-direction: column;
+
+        h2 {
+            text-transform: uppercase;
+            font-size: .9;
+            font-weight: 500;
+            border-bottom: 1px solid $lines-color;
+            padding-bottom: .5em;
+        }
+
+        a {
+            padding: .5rem 2rem;
+            
+            
+            margin: .3em 0;
+            border-radius: 0 3px 3px 0;
+            font-weight: 500;
+
+            &:hover {
+                border-left: 5px solid $accent-blue-color;
+                background: rgba($darker-color,.1);
+                transition: all .2s ease;
+            }
+        }
+
+        input[type="range"] {
+            margin: .5rem;
+        }
+    }
+
+    .search-container {
+        position: relative;
+        gap: 1em;
+
+        input {
+            padding: .5em 2.3em .5em .3em;
+            border-style: none;
+            border: 1px solid $lines-color;
+            border-radius: 3px;
+            position: relative;
+
+            &:active, &:focus {
+                outline: none;
+                box-shadow: 0 0 2px 0px rgba($darker-color, .9);
+            }
+
+            &::placeholder {
+                background: $white-color;
+                font-size: .9rem;
+                font-weight: 500;
+            }
+        }
+        
+        button {
+            width: 30px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border-style: none;
+            border: none;
+            border-radius: 3px;
+            padding: 5px;
+            background: $text-color;
+            position: absolute;
+            bottom: 3px;
+            right: 3px;
+
+            &:active {
+                background: $darker-color;
+                box-shadow: 0 0 5px 1px rgba($accent-blue-color,.5);
+                opacity: .5;
+            }
+
+            &:hover {
+                box-shadow: 0 0 5px 1px rgba($darker-color,.2);
+            }
+
+            svg {
+                width: 30px;
+                fill: $white-color;
+            }
+        }
+    }
+
+    .developedby-container {
+        display: flex;
+        gap: 1rem;
+
+        label {
+            font-weight: 500;
+        }
+        
+        input {
+            margin-right: .5em;
+        }
+    }
+}
+
+.center-container {
+    width: 70%;
+    display: flex;
+    
+    .upper-container {
+        display: flex;
+        flex-flow: row wrap;
+        margin: 0 auto;
+        gap: 5em;
+        border-bottom: 1px solid $lines-color;
+        padding-bottom: 1em;
+        height: fit-content;
+        
+        div {
+            label {
+                font-weight: 500;
+                margin-right: .5em;
+            }
+
+            select {
+                padding: .8rem;
+                height: fit-content;
+                outline: none;
+                border: 1px solid $lines-color;
+                border-radius: 3px;
+
+                option {
+                    line-height: 2rem;
+                    padding: 3em;
+                }
+            }
+            
+        }
+        
+        .sortbylicence {
+            display: flex;
+            justify-content: center;
+            flex-direction: row;
+            height: fit-content;
+            border: 1px solid $lines-color;
+            border-radius: 3px;
+            
+            a {
+                padding: 1rem;
+                background-color: $white-color;
+                text-transform: uppercase;
+                border: none;
+                font-weight: 500;
+
+                &:hover {
+                    background: $accent-blue-color;
+                    color: $white-color;
+                    transition: all .3s ease;
+                }
+            }
+        }
+    }
+
+}

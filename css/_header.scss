@@ -42,12 +42,23 @@ header {
             display: flex;
             justify-content: flex-start;
             gap: 1.5rem;
-
+            
             li {
                 cursor: pointer;
 
                 &:hover {
                     color: $accent-blue-color;
+                }
+
+                a {
+                    text-decoration: none;
+                    color: $text-color;
+            
+                    &:hover {
+                        color: $accent-blue-color;
+                        transform: translateY(1rem);
+                        transition: all .2s ease;
+                    }
                 }
             }
         }
