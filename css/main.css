@@ -111,6 +111,20 @@ header nav .buttons button:active {
   outline: none;
 }
 
+::-webkit-scrollbar {
+  background: #242D37;
+  width: .5em;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: rgba(43, 190, 236, 0.5);
+  border-radius: 5px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #2BBEEC;
+}
+
 .welcome-message {
   position: relative;
   width: 100%;
@@ -319,6 +333,10 @@ header nav .buttons button:active {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: column wrap;
+          flex-flow: column wrap;
 }
 
 .center-container .upper-container {
@@ -391,6 +409,93 @@ header nav .buttons button:active {
   transition: all .3s ease;
 }
 
+.center-container .middle-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: row wrap;
+          flex-flow: row wrap;
+  gap: 2em;
+}
+
+.center-container .middle-container .card-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 1em;
+  width: 16em;
+  border: 1px solid #D9DADC;
+  border-radius: 3px;
+  margin-top: 2em;
+}
+
+.center-container .middle-container .card-container:hover {
+  -webkit-box-shadow: 0 0 5px 0.5px rgba(0, 0, 0, 0.2);
+          box-shadow: 0 0 5px 0.5px rgba(0, 0, 0, 0.2);
+  -webkit-transform: translateY(-0.2em);
+          transform: translateY(-0.2em);
+  -webkit-transition: .3s ease;
+  transition: .3s ease;
+}
+
+.center-container .middle-container .card-container .card-preview {
+  width: inherit;
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+  border-radius: 3px 3px 0 0;
+}
+
+.center-container .middle-container .card-container .card-preview a, .center-container .middle-container .card-container .card-preview img {
+  width: inherit;
+  border-bottom: 1px solid #D9DADC;
+  border-radius: inherit;
+}
+
+.center-container .middle-container .card-container .card-preview a:hover, .center-container .middle-container .card-container .card-preview img:hover {
+  -webkit-filter: brightness(0.9);
+          filter: brightness(0.9);
+  -webkit-transition: .2s ease-out;
+  transition: .2s ease-out;
+}
+
+.center-container .middle-container .card-container .card-details {
+  border-bottom: 1px solid #D9DADC;
+}
+
+.center-container .middle-container .card-container .card-details p {
+  margin: 0 .5em;
+  font-weight: 500;
+  line-height: 2rem;
+  text-transform: capitalize;
+}
+
+.center-container .middle-container .card-container .card-additions {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  margin: .5rem 0;
+}
+
+.center-container .middle-container .card-container .card-additions div {
+  font-weight: 500;
+}
+
 footer {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -447,12 +552,12 @@ footer {
   font-size: .9rem;
 }
 
-.top-container section ul li {
+.top-container section ul a {
   text-transform: capitalize;
   cursor: pointer;
 }
 
-.top-container section ul li:hover {
+.top-container section ul a:hover {
   color: #2BBEEC;
 }
 

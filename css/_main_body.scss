@@ -5,7 +5,22 @@ $darker-color: #000;
 $lines-color: #D9DADC;
 $white-color: #fff;
 $accent-blue-color: #2BBEEC;
-$cards-shadow: 0 0 0 5px rgba(0,0,0,.5);
+$cards-shadow: 0 0 5px .5px rgba($darker-color,.2);
+
+::-webkit-scrollbar {
+    background: $footer-background;
+    width: .5em;
+
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: rgba($accent-blue-color,.5);
+    border-radius: 5px;
+
+    &:hover {
+        background: $accent-blue-color;
+    }
+}
 
 .welcome-message {
     position: relative;
@@ -157,6 +172,7 @@ $cards-shadow: 0 0 0 5px rgba(0,0,0,.5);
 .center-container {
     width: 70%;
     display: flex;
+    flex-flow: column wrap;
     
     .upper-container {
         display: flex;
@@ -212,4 +228,65 @@ $cards-shadow: 0 0 0 5px rgba(0,0,0,.5);
         }
     }
 
+    .middle-container {
+        display: flex;
+        justify-content: flex-start;
+        flex-flow: row wrap;
+        gap: 2em;
+
+        .card-container {
+            display: flex;
+            justify-content: flex-start;
+            flex-direction: column;
+            gap: 1em;
+            width: 16em;
+            border: 1px solid $lines-color;
+            border-radius: 3px;
+            margin-top: 2em;
+
+            &:hover {
+                box-shadow: $cards-shadow;
+                transform: translateY(-.2em);
+                transition: .3s ease;
+            }
+
+            .card-preview {
+                width: inherit;
+                height: fit-content;
+                border-radius: 3px 3px 0 0;
+
+                a, img {
+                    width: inherit;
+                    border-bottom: 1px solid $lines-color;
+                    border-radius: inherit;
+
+                    &:hover {
+                        filter: brightness(.9);
+                        transition: .2s ease-out;
+                    }
+                }
+            }
+
+            .card-details {
+                border-bottom: 1px solid $lines-color;
+                
+                p {
+                    margin: 0 .5em;
+                    font-weight: 500;
+                    line-height: 2rem;
+                    text-transform: capitalize;
+                }
+            }
+
+            .card-additions {
+                display: flex;
+                justify-content: space-evenly;
+                margin: .5rem 0;
+
+                div{
+                    font-weight: 500;
+                }
+            }
+        }
+    }
 }
