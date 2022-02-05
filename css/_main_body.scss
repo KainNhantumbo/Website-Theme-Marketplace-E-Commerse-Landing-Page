@@ -101,7 +101,9 @@ $cards-shadow: 0 0 5px .5px rgba($darker-color,.2);
 
     @media screen and (max-width: 940px) {
         flex-flow: column wrap;
+        justify-content: center;
         margin: 0;
+        width: 80%;
     }
 
     div {
@@ -213,6 +215,7 @@ $cards-shadow: 0 0 5px .5px rgba($darker-color,.2);
     @media screen and (max-width: 940px) {
         justify-content: center;
         align-items: center;
+        width: 100%;
         
     }
     
@@ -224,12 +227,17 @@ $cards-shadow: 0 0 5px .5px rgba($darker-color,.2);
         border-bottom: 1px solid $lines-color;
         padding-bottom: 1em;
         height: fit-content;
-/* 
+
         @media screen and (max-width: 940px) {
-            flex-direction: column;
             gap: 2em;
-            
-        } */
+            margin-top: 2em;
+        }
+
+        @media screen and (max-width: 620px) {
+            gap: 2em;
+            flex-flow: column wrap;
+        }
+
         
         div {
             label {
@@ -291,12 +299,6 @@ $cards-shadow: 0 0 5px .5px rgba($darker-color,.2);
             border: 1px solid $lines-color;
             border-radius: 3px;
             margin-top: 2em;
-
-            @media screen and (max-width: 940px) {
-                .card-container {
-
-                }
-            }
 
             &:hover {
                 box-shadow: $cards-shadow;

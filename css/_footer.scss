@@ -23,7 +23,23 @@ footer {
     gap: 5%;
 
     @media screen and (max-width: 865px) {
-        flex-direction: column;
+        // flex-direction: column;
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: repeat(2, 1fr);
+    }
+
+    @media screen and (max-width: 730px) {
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(3, 1fr);
+        gap: 0;
+    }
+
+    @media screen and (max-width: 500px) {
+        width: 60%;
+        grid-template-columns: 1fr;
+        align-items: center;
+        gap: 2em;
     }
 
     section {
@@ -32,6 +48,10 @@ footer {
         justify-content: flex-start;
         flex-flow: column wrap;
         line-height: 1.8rem;
+
+        @media screen and (max-width: 865px) {
+            width: 100%;
+        }
 
         div {
             display: inline-block;
@@ -120,6 +140,12 @@ footer {
     }
 }
 
+#head_list-element {
+    @media screen and (max-width: 465px) {
+        height: 9em;
+    }
+}
+
 .base-container {
     display: flex;
     justify-content: space-around;
@@ -130,6 +156,10 @@ footer {
         gap: 2em;
     }
 
+    @media screen and (max-width: 370px) {
+        align-items: center;
+    }
+
     .logo-base {
         display: flex;
         justify-content: flex-start;
@@ -137,6 +167,10 @@ footer {
 
         div {
             color: $accent-blue-color;
+
+            @media screen and (max-width: 865px) {
+                font-weight: .5rem;
+            }
         }
     
         .svg {
