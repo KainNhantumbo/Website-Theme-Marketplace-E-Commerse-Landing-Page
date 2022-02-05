@@ -9,7 +9,7 @@ $cards-shadow: 0 0 0 5px rgba(0,0,0,.5);
 
 footer {
     display: flex;
-    flex-direction: column;
+    flex-flow: column wrap;
     gap: 2em;
     background: $footer-background;
     color: $white-color;
@@ -18,11 +18,16 @@ footer {
 
 .top-container {
     display: flex;
-    justify-content: center;
-    gap: 2rem;
+    justify-content: flex-start;
+    flex-flow: row wrap;
+    gap: 5%;
+
+    @media screen and (max-width: 865px) {
+        flex-direction: column;
+    }
 
     section {
-        width: 15vw;
+        width: 20%;
         display: flex;
         justify-content: flex-start;
         flex-flow: column wrap;
@@ -57,6 +62,10 @@ footer {
 
         label {
             margin: .5em 0;
+
+            @media screen and (max-width: 865px) {
+                margin: 0;
+            }
         }
 
         input {
@@ -94,7 +103,7 @@ footer {
                 background: $accent-blue-color;
                 position: absolute;
                 bottom: 2px;
-                right: 3px;
+                right: 9px;
 
                 &:hover {
                     box-shadow: 0 0 5px 1px rgba($accent-blue-color,.5);
@@ -114,7 +123,12 @@ footer {
 .base-container {
     display: flex;
     justify-content: space-around;
-    flex-flow: row wrap-reverse;
+    flex-flow: row no-wrap;
+
+    @media screen and (max-width: 865px) {
+        flex-direction: column;
+        gap: 2em;
+    }
 
     .logo-base {
         display: flex;
@@ -138,6 +152,11 @@ footer {
         justify-content: space-evenly;
         gap: 3em;
 
+        @media screen and (max-width: 865px) {
+            gap: 2em;
+            order: -1;
+        }
+
         div {
             position: relative;
 
@@ -147,6 +166,12 @@ footer {
                 position: absolute;
                 bottom: 8px;
                 left: -25px;
+
+                @media screen and (max-width: 865px) {
+                    bottom: -3px;
+                    left: -25px;
+
+                }
             }
         }
 

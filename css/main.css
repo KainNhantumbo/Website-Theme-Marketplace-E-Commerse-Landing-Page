@@ -9,6 +9,7 @@ header {
       -ms-user-select: none;
           user-select: none;
   margin: auto 0;
+  position: relative;
 }
 
 header nav {
@@ -20,6 +21,15 @@ header nav {
           justify-content: space-between;
   margin: auto 0;
   line-height: calc(5vh + 3vh);
+}
+
+@media screen and (max-width: 940px) {
+  header nav {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-flow: column wrap;
+            flex-flow: column wrap;
+  }
 }
 
 header nav .logo {
@@ -53,6 +63,26 @@ header nav .nav-list {
       -ms-flex-pack: start;
           justify-content: flex-start;
   gap: 1.5rem;
+}
+
+@media screen and (max-width: 940px) {
+  header nav .nav-list {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-flow: column wrap;
+            flex-flow: column wrap;
+    gap: .2rem;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  header nav .nav-list {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-flow: column wrap;
+            flex-flow: column wrap;
+    gap: 0;
+  }
 }
 
 header nav .nav-list li {
@@ -90,6 +120,15 @@ header nav .buttons {
   gap: 1rem;
 }
 
+@media screen and (max-width: 940px) {
+  header nav .buttons {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-flow: column wrap;
+            flex-flow: column wrap;
+  }
+}
+
 header nav .buttons button {
   background: none;
   border-style: none;
@@ -111,6 +150,80 @@ header nav .buttons button:active {
   outline: none;
 }
 
+header nav .buttons button svg {
+  width: 30px;
+  fill: #2BBEEC;
+}
+
+header nav .buttons button svg:hover {
+  fill: #fff;
+}
+
+@media screen and (max-width: 940px) {
+  header nav .buttons button {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-flow: column wrap;
+            flex-flow: column wrap;
+    padding: 1rem;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  header nav .buttons button a {
+    text-align: center;
+  }
+}
+
+header nav .buttons #menu-toggle {
+  display: none;
+}
+
+@media screen and (max-width: 940px) {
+  header nav .buttons #menu-toggle {
+    display: block;
+    padding: 5px;
+    position: absolute;
+    top: 1em;
+    right: 3em;
+  }
+}
+
+@-webkit-keyframes menuAnimation {
+  from {
+    border-bottom-left-radius: 50%;
+    -webkit-transform: translate(-2em, 4em);
+            transform: translate(-2em, 4em);
+  }
+  to {
+    border-radius: initial;
+    -webkit-transform: translate(initial, initial);
+            transform: translate(initial, initial);
+  }
+}
+
+@keyframes menuAnimation {
+  from {
+    border-bottom-left-radius: 50%;
+    -webkit-transform: translate(-2em, 4em);
+            transform: translate(-2em, 4em);
+  }
+  to {
+    border-radius: initial;
+    -webkit-transform: translate(initial, initial);
+            transform: translate(initial, initial);
+  }
+}
+
+.hide-menu {
+  display: none;
+  -webkit-animation: menuAnimation ease 500ms forwards;
+          animation: menuAnimation ease 500ms forwards;
+}
+
 ::-webkit-scrollbar {
   background: #242D37;
   width: .5em;
@@ -128,8 +241,6 @@ header nav .buttons button:active {
 .welcome-message {
   position: relative;
   width: 100%;
-  padding: 0;
-  margin: 0;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -149,15 +260,43 @@ header nav .buttons button:active {
   text-align: center;
   color: #fff;
   position: absolute;
-  top: 3em;
+  top: 30%;
   left: auto;
   z-index: 1;
+  padding: 1rem;
+}
+
+@media screen and (max-width: 955px) {
+  .welcome-message h1, .welcome-message p {
+    font-size: 1rem;
+  }
+}
+
+@media screen and (max-width: 520px) {
+  .welcome-message h1, .welcome-message p {
+    font-size: .9rem;
+    line-height: 1.2 rem;
+  }
 }
 
 .welcome-message p {
   font-size: 1.5rem;
   line-height: 2rem;
-  top: 8em;
+  top: 50%;
+}
+
+@media screen and (max-width: 955px) {
+  .welcome-message p {
+    font-size: 1rem;
+    line-height: 1.6rem;
+  }
+}
+
+@media screen and (max-width: 520px) {
+  .welcome-message p {
+    font-size: .9rem;
+    line-height: 1rem;
+  }
 }
 
 .welcome-message img {
@@ -174,8 +313,29 @@ header nav .buttons button:active {
   -webkit-box-pack: start;
       -ms-flex-pack: start;
           justify-content: flex-start;
-  gap: 5%;
-  margin: 2em 5%;
+  gap: 2%;
+  margin: 2em 1%;
+}
+
+@media screen and (max-width: 940px) {
+  .main-container {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+}
+
+@media screen and (max-width: 740px) {
+  .main-container {
+    margin: 2em;
+  }
 }
 
 .aside-container {
@@ -191,6 +351,17 @@ header nav .buttons button:active {
       -ms-flex-flow: column wrap;
           flex-flow: column wrap;
   gap: 1em;
+  margin-left: 1em;
+}
+
+@media screen and (max-width: 940px) {
+  .aside-container {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-flow: column wrap;
+            flex-flow: column wrap;
+    margin: 0;
+  }
 }
 
 .aside-container div {
@@ -329,7 +500,7 @@ header nav .buttons button:active {
 }
 
 .center-container {
-  width: 70%;
+  width: 75%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -337,6 +508,17 @@ header nav .buttons button:active {
   -webkit-box-direction: normal;
       -ms-flex-flow: column wrap;
           flex-flow: column wrap;
+}
+
+@media screen and (max-width: 940px) {
+  .center-container {
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
 }
 
 .center-container .upper-container {
@@ -354,6 +536,12 @@ header nav .buttons button:active {
   height: -webkit-fit-content;
   height: -moz-fit-content;
   height: fit-content;
+  /* 
+        @media screen and (max-width: 940px) {
+            flex-direction: column;
+            gap: 2em;
+            
+        } */
 }
 
 .center-container .upper-container div label {
@@ -413,9 +601,9 @@ header nav .buttons button:active {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: start;
-      -ms-flex-pack: start;
-          justify-content: flex-start;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
   -webkit-box-orient: horizontal;
   -webkit-box-direction: normal;
       -ms-flex-flow: row wrap;
@@ -502,8 +690,8 @@ footer {
   display: flex;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
+      -ms-flex-flow: column wrap;
+          flex-flow: column wrap;
   gap: 2em;
   background: #242D37;
   color: #fff;
@@ -514,14 +702,27 @@ footer {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  gap: 2rem;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: row wrap;
+          flex-flow: row wrap;
+  gap: 5%;
+}
+
+@media screen and (max-width: 865px) {
+  .top-container {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
 }
 
 .top-container section {
-  width: 15vw;
+  width: 20%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -567,6 +768,12 @@ footer {
 
 .top-container section label {
   margin: .5em 0;
+}
+
+@media screen and (max-width: 865px) {
+  .top-container section label {
+    margin: 0;
+  }
 }
 
 .top-container section input {
@@ -631,7 +838,7 @@ footer {
   background: #2BBEEC;
   position: absolute;
   bottom: 2px;
-  right: 3px;
+  right: 9px;
 }
 
 .top-container section .input-container button:hover {
@@ -652,8 +859,18 @@ footer {
       justify-content: space-around;
   -webkit-box-orient: horizontal;
   -webkit-box-direction: normal;
-      -ms-flex-flow: row wrap-reverse;
-          flex-flow: row wrap-reverse;
+      -ms-flex-flow: row no-wrap;
+          flex-flow: row no-wrap;
+}
+
+@media screen and (max-width: 865px) {
+  .base-container {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    gap: 2em;
+  }
 }
 
 .base-container .logo-base {
@@ -689,6 +906,15 @@ footer {
   gap: 3em;
 }
 
+@media screen and (max-width: 865px) {
+  .base-container .social-media {
+    gap: 2em;
+    -webkit-box-ordinal-group: 0;
+        -ms-flex-order: -1;
+            order: -1;
+  }
+}
+
 .base-container .social-media div {
   position: relative;
 }
@@ -699,6 +925,13 @@ footer {
   position: absolute;
   bottom: 8px;
   left: -25px;
+}
+
+@media screen and (max-width: 865px) {
+  .base-container .social-media div .social-media_svg {
+    bottom: -3px;
+    left: -25px;
+  }
 }
 
 .base-container .social-media a {
