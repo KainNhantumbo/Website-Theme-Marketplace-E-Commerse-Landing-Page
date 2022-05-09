@@ -275,7 +275,18 @@ header nav .buttons #menu-toggle {
 @media screen and (max-width: 520px) {
   .welcome-message h1, .welcome-message p {
     font-size: .9rem;
-    line-height: 1.2 rem;
+    line-height: 2rem;
+    top: .5rem;
+    padding: 0;
+  }
+}
+
+@media screen and (max-width: 320px) {
+  .welcome-message h1, .welcome-message p {
+    font-size: .9rem;
+    line-height: 1rem;
+    top: .5rem;
+    padding: 0;
   }
 }
 
@@ -295,7 +306,14 @@ header nav .buttons #menu-toggle {
 @media screen and (max-width: 520px) {
   .welcome-message p {
     font-size: .9rem;
-    line-height: 1rem;
+    line-height: 1.6rem;
+    padding: .2rem;
+  }
+}
+
+@media screen and (max-width: 440px) {
+  .welcome-message p {
+    top: 3.2em;
   }
 }
 
@@ -304,6 +322,12 @@ header nav .buttons #menu-toggle {
   display: inline-block;
   -webkit-filter: brightness(0.4);
           filter: brightness(0.4);
+}
+
+@media screen and (max-width: 440px) {
+  .welcome-message img {
+    height: 10em;
+  }
 }
 
 .main-container {
@@ -338,6 +362,12 @@ header nav .buttons #menu-toggle {
   }
 }
 
+@media screen and (max-width: 400px) {
+  .main-container {
+    margin: .5em;
+  }
+}
+
 .aside-container {
   width: 25%;
   display: -webkit-box;
@@ -365,6 +395,12 @@ header nav .buttons #menu-toggle {
             justify-content: center;
     margin: 0;
     width: 80%;
+  }
+}
+
+@media screen and (max-width: 400px) {
+  .aside-container {
+    width: 100%;
   }
 }
 
@@ -625,6 +661,12 @@ header nav .buttons #menu-toggle {
       -ms-flex-flow: row wrap;
           flex-flow: row wrap;
   gap: 2em;
+}
+
+@media screen and (max-width: 450px) {
+  .center-container .middle-container {
+    gap: .5em;
+  }
 }
 
 .center-container .middle-container .card-container {
