@@ -2,6 +2,8 @@
 
 This is just a project that a built for training SASS (.scss) and HTML.
 
+**Note: you can access the running deployed version at [https://kainnhantumbo.github.io/Website-Theme-Marketplace-E-Commerse-Landing-Page](https://kainnhantumbo.github.io/Website-Theme-Marketplace-E-Commerse-Landing-Page 'Visit site.')**
+
 #### Feel free to clone this repository to view the source code. Here is a preview project screenshot image:
 ![](/docs/Web%20capture_9-5-2022_192318_127.0.0.1.jpeg)
 
